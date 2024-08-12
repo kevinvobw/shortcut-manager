@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Auth0Provider } from '@auth0/auth0-react';
+import Navbar from './Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Auth0Provider
+    domain="volt-it.eu.auth0.com"
+    clientId="N5Azkq1lrcd86yIGH8x0iv2tkosrAYFb"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
+    <Navbar/>
+    <App/>
+  </Auth0Provider>
   </React.StrictMode>
 );
 
