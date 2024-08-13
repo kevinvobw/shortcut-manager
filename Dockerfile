@@ -2,10 +2,10 @@
 FROM mariadb as database
 
 # ENV variarbles
-ENV MARIADB_ROOT_PASSWORD="HEM2620"
+ENV MARIADB_ROOT_PASSWORD="DataB@s3!"
 ENV MARIADB_DATABASE="shortcuts_db"
 ENV MARIADB_USER="mariadmin"
-ENV MARIADB_PASSWORD="Database2620"
+ENV MARIADB_PASSWORD="Database@26!"
 
 # Copy all files to container
 COPY database.sql /
